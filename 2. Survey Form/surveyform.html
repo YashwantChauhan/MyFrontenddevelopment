@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please fill this survey form</title>
+    <link rel="stylesheet" href="surveyform.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1 style="margin: 40px 0px 0px 0px;" id="title"> <u>AIT Survey Form</u></h1>
+            <p id="description" ><em>Please fill truthfully every suggestion matters!</em></p>
+        </header>
+        <div class="form-div">
+            <form id="survey-form">
+               <div class="form-group">
+                   <label for="name" id="name-label" > Name </label>
+                   <input type="text" id="name" placeholder="Enter Your Name" class="text-area" required>
+               </div>
+                <div class="form-group">
+                    <label for="email" id="email-label" > Email </label>
+                    <input type="email" id="email" placeholder="yash@gmail.com" class="text-area" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="number" id="number-label" > Number </label>
+                    <input type="number" id="number" placeholder="Enter your phone no." min="9000000000" max="9999999999"class="text-area">
+                </div>
+
+                <div class="form-group">
+                    <label> Enter your Hostel Name </label>
+                    <select class="text-area" id="dropdown" required>
+                        <option selected disabled hidden > Select Your Hostel Name </option>
+                        <option> Abdul Kalam </option>
+                        <option> Vishweshwariya </option>
+                        <option> OBH-2 </option>
+                        <option> GH </option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="dropdown" >
+
+                    <label> Select your Year </label>
+                    <label name="year" style="margin-top: 15px;">
+
+                        <input type="radio" class="input-radio" name="year" checked>
+                        <div class="radio-option">FE</div> 
+
+
+
+                    </label>
+                    <label name="year" style="margin-top: 10px;" >
+
+                        <input type="radio" class="input-radio" name="year">
+                        <div class="radio-option">SE</div> 
+
+
+
+                    </label>
+                    
+                    <label name="year" style="margin-top: 10px;" >
+
+                        <input type="radio" class="input-radio" name="year">
+                        <div class="radio-option">TE</div> 
+
+
+
+                    </label>
+                    
+                    <label name="year" style="margin-top: 10px;" >
+
+                        <input type="radio" class="input-radio" name="year">
+                        <div class="radio-option">BE</div> 
+
+
+
+                    </label>
+                    
+                    
+                </div>
+
+                <div class="form-group">
+
+                    <label id="suggestions" >
+                        Please choose the services we should work upon (Optional):
+
+                    </label>
+
+                    <label style="margin-top: 20px;">
+                         <input value="Food and Mess" type="checkbox" class="input-checkbox">
+                         <div class="checkbox-option"> Food and Messing Services</div>
+                    </label>
+                    <label style="margin-top: 10px;">
+                        <input value="Laundry" type="checkbox" class="input-checkbox">
+                        <div class="checkbox-option">Laundry</div>
+                   </label>
+                   
+                   <label style="margin-top: 10px;">
+                    <input value="Cleaning Services" type="checkbox" class="input-checkbox">
+                    <div class="checkbox-option"> Cleaning Services</div>
+                   </label>
+                   <label style="margin-top: 10px;">
+                    <input value="Wifi" type="checkbox" class="input-checkbox">
+                    <div class="checkbox-option"> Wifi </div>
+                    </label>
+                    <label style="margin-top: 10px;">
+                        <input value="Water Supply" type="checkbox" class="input-checkbox">
+                        <div class="checkbox-option">Water Supply</div>
+                    </label>
+                    <label style="margin-top: 10px;">
+                        <input value="Food and Mess" type="checkbox" class="input-checkbox">
+                        <div class="checkbox-option">Security </div>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Any other Suggestions ?</label>
+                    <textarea type="textarea" class="suggestion-box"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-button"><em>Submit</em></button>
+                </div>
+
+                
+            </form>
+
+        </div>
+    </main>
+    
+</body>
+</html>
