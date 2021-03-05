@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation of C++ </title>
+    <link rel="stylesheet" href="Documentation.css">
+    <style>
+        
+:root{
+       --col-black: #0a0a23;
+       --col-back: rgba( 100 , 100 , 0, 0.1 );
+}
+
+body{
+
+    background-color: var(--col-back);
+    overflow-x: hidden;
+
+}
+
+.header-main{
+
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: 100;
+    color: rgba( 255,255, 255, 1 );
+    text-align: center;
+    background-color: var(--col-black);
+
+}
+
+@media (max-width: 550px){
+    .header-main{
+
+        position: absolute;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+}
+
+nav{
+
+    width: 23vw;
+    position: fixed;
+    top: 54px;
+    left: 0; 
+    height: 100%;
+    border-right:2px solid black;
+    border-top: 2px solid black;
+}
+
+nav header{
+
+    font-size: 25px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba( 100 , 100 , 0, 0.0 );
+    box-sizing: border-box;
+    color: var(--col-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+   
+
+}
+
+nav ul{
+
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+nav li{
+
+    list-style: none;
+    border-top:1px solid black;
+    height: 70px;
+    position: relative;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+nav a{
+
+    text-decoration: none;
+    color: rgba(0,0,0,0.8);
+
+}
+
+@media (max-width: 550px){
+    nav{
+
+        position: absolute; 
+        top: 60px;
+        left: 30px;
+        right: auto;
+        height: 300px;
+        width: 80%;
+        border: 2px solid black;
+    }
+
+    nav ul{
+        max-height: 80%;
+    }
+}
+
+#main-doc{
+    padding-top: 60px;
+}
+
+#main-doc .main-section{
+
+    margin: 20px 0px 0px auto;
+    width: 76vw;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+#main-doc .main-section header{
+    position: relative;
+    height: 15%;
+    width: 100%;
+    background-color: rgba( 0,0,0,0);
+    box-sizing: border-box;
+    padding: 0px 0px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 40px;
+    color: black;
+}
+#main-doc .main-section p{
+
+    text-align: left;
+    font-size: 20px;
+    margin: 20px 0px 0px 40px;
+    line-height: 1.2;
+    padding: 0;
+    
+
+}
+
+
+
+
+.code-div{
+
+    margin: 20px 0px 0px 40px;
+    background-color: rgba( 100 , 100 , 0, 0.2 );
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    font-weight: 100;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+@media (max-width: 550px){
+
+    #main-doc{
+        padding-top: 400px;
+    }
+    #main-doc .main-section{
+
+        width: 100%;
+        margin-top: 30px;
+        
+
+
+    }
+    #main-doc .main-section header{
+
+        padding: 0px 0px 0px 20px;
+        align-items: center;
+        
+    }
+    #main-doc .main-section p{
+
+        margin-left: 20px;
+    }
+    .code-div{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+    <header class="header-main">
+        DOCUMENTATION OF C++
+    </header>
+    <nav id="nav-bar">
+        <header>
+            C++
+        </header>
+        <ul>
+            <li>
+                <a href="#Introduction"> Introduction </a>
+            </li>
+            <li>
+                <a href="#C++_Type_System"> C++ Type System </a>
+            </li>
+            <li>
+                <a href="#Functions"> Functions </a>
+            </li>
+            <li>
+                <a href="#Arrays"> Arrays</a>
+            </li>
+            <li>
+                <a href="#Hello_World"> Hello World</a>
+            </li>
+            <li>
+                <a href="#Lambda_Expressions"> Lambda Expressions</a>
+            </li>
+            <li>
+                <a href="#Expression_Handling"> Expression Handling </a>
+            </li>
+            <li>
+                <a href="#Templates">Templates</a>
+            </li>
+            <li>
+                <a href="#Operator_Overloading"> Operator Overloading</a>
+            </li>
+            <li>
+                <a href="#Event_Handling"> Event Handling </a>
+            </li>
+            <li>
+                <a href="#Overview_Of_Modules"> Overview of Modules</a> 
+            </li>
+            <li>
+                <a href="#Standard_Library_Reference"> Standard Library Reference</a>
+            </li>
+           
+            
+
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+
+        <section id="Introduction" class="main-section" ">
+            <header>
+               Introduction
+            </header>
+            
+            <p>Since its creation, C++ has become one of the most widely used programming languages in the world. Well-written C++ programs are fast and efficient. The language is more flexible than other languages: It can work at the highest levels of abstraction, and down at the level of the silicon. C++ supplies highly optimized standard libraries. It enables access to low-level hardware features, to maximize speed and minimize memory requirements. Using C++, you can create a wide range of apps. Games, device drivers, and high-performance scientific software. Embedded programs. Windows client apps. Even libraries and compilers for other programming languages get written in C++.</p>
+            <p>One of the original requirements for C++ was backward compatibility with the C language. As a result, C++ has always permitted C-style programming, with raw pointers, arrays, null-terminated character strings, and other features. They may enable great performance, but can also spawn bugs and complexity. The evolution of C++ has emphasized features that greatly reduce the need to use C-style idioms. The old C-programming facilities are there when you need them, but with modern C++ code you should need them less and less. Modern C++ code is simpler, safer, more elegant, and still as fast as ever.</p>
+            <p>The following sections provide an overview of the main features of modern C++. Unless noted otherwise, the features listed here are available in C++11 and later. In the Microsoft C++ compiler, you can set the /std compiler option to specify which version of the standard to use for your project.</p>
+
+        </section>
+
+        <section id="C++_Type_System" class="main-section">
+            <header>
+                C++ Type System
+            </header>
+            
+            <ul>
+            <li><p>The concept of type is very important in C++. Every variable, function argument, and function return
+                value must have a type in order to be compiled. Also, every expression (including literal values) is
+                implicitly given a type by the compiler before it is evaluated. Some examples of types include int to
+                store integral values, double to store floating-point values (also known as scalar data types), or the
+                Standard Library class std::basic_string to store text.</p>
+            </li>    
+               
+            <li>
+                <p>
+                You can create your own type by defining a class
+                or struct. The type specifies the amount of memory that will be allocated for the variable (or
+                expression result), the kinds of values that may be stored in that variable, how those values (as bit
+                patterns) are interpreted, and the operations that can be performed on it. This article contains an
+                informal overview of the major features of the C++ type system.</p>
+            </li> 
+            <li>   
+                <p>Unlike some languages, C++ has no universal base type from which all other types are derived. The
+                language includes many fundamental types, also known as built-in types. This includes numeric types such
+                as int, double, long, bool, plus the char and wchar_t types for ASCII and UNICODE characters,
+                respectively. Most integral fundamental types (except bool, double, wchar_t, and related types) all have
+                unsigned versions, which modify the range of values that the variable can store. </p>
+                
+            </li>
+
+            <li>
+                <p>
+                For example, an int,
+                which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An
+                unsigned int, which is also stored as 32-bits, can store a value from 0 to 4,294,967,295. The total
+                number of possible values in each case is the same; only the range is different.</p>
+            <li><p>Dating back to the earliest versions of the C language, C++ continues to let you declare a variable of a
+                pointer type by using the special declarator * (asterisk). A pointer type stores the address of the
+                location in memory where the actual data value is stored. In modern C++, these are referred to as raw
+                pointers, and are accessed in your code through special operators * (asterisk) or -> (dash with
+                greater-than). This is called dereferencing, and which one that you use depends on whether you are
+                dereferencing a pointer to a scalar or a pointer to a member in an object.</p> 
+                
+                <p>Working with pointer types
+                has long been one of the most challenging and confusing aspects of C and C++ program development. This
+                section outlines some facts and practices to help use raw pointers if you want to, but in modern C++
+                it’s no longer required (or recommended) to use raw pointers for object ownership at all, due to the
+                evolution of the smart pointer (discussed more at the end of this section). It is still useful and safe
+                to use raw pointers for observing objects, but if you must use them for object ownership, you should do
+                so with caution and very careful consideration of how the objects owned by them are created and
+                destroyed.</p>
+            </ul>
+            <div class="code-div">
+                <code>
+                    int* pNumber; <br>     
+                    *pNumber = 10;
+               </code>
+            </div>
+        </section>
+        <br>
+        <section class="main-section" id="Hello_World">
+
+            <header>
+                Hello World
+            </header>
+
+            <p>
+            To get Started with C++ write the following code on your C++ console . This code will print "Hello World" on your output screen.    </p>
+            <div class="code-div">
+                <code>
+                    #include&lt;bits/stdc++.h&gt;<br>
+                    using namespace std;<br>
+                    
+                    int main{<br><br>
+                    
+                        <p style="text-indent: 20px; margin:0;">cout<<"Hello World\n";</p>
+                        <p style="text-indent: 20px; margin:0;">return 0;</p><br>
+                    
+                    
+                    }
+                 
+                
+                </code>
+            </div>
+             
+            <p> Hurray! Now this is a starting now you can write a bit more complex codes!</p>
+        </section>
+
+        <section id="Functions" class="main-section">
+            <header>
+                Functions
+            </header>
+            <p>A function is a block of code that performs some operation. A function can optionally define input parameters that enable callers to pass arguments into the function. A function can optionally return a value as output. Functions are useful for encapsulating common operations in a single reusable block, ideally with a name that clearly describes what the function does. The following function accepts two integers from a caller and returns their sum; a and b are parameters of type int.</p>
+            <div class="code-div">
+                <code>
+                int sum(int a, int b)
+                <p style="text-indent: 20px; margin:0;">{</p>
+                    <p style="text-indent: 40px; margin:0;"> return a + b;</p>               
+                    <p style="text-indent: 20px; margin:0;">}</p>
+                
+                </code>
+            </div>
+            <p>
+                There is no practical limit to function length, but good design aims for functions that perform a single well-defined task. Complex algorithms should be broken up into easy-to-understand simpler functions whenever possible.
+
+Functions that are defined at class scope are called member functions. In C++, unlike other languages, a function can also be defined at namespace scope (including the implicit global namespace). Such functions are called <em>free functions</em> or <em>non-member functions</em>; they are used extensively in the Standard Library.
+
+Functions may be overloaded, which means different versions of a function may share the same name if they differ by the number and/or type of formal parameters. For more information, see Function Overloading.
+            </p>
+        </section>
+
+        <section class="main-section" id="Arrays">
+            <header>Arrays</header>
+            <p>An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using std::vector or std::array instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory. However, they provide much greater type safety, and support iterators that are guaranteed to point to a valid location within the sequence. For more information, see Containers.</p>
+            <p>In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression. That's because the compiler has to know how much stack space to allocate; it can't use a value computed at run-time. Each element in the array is assigned a default value of 0. If you don't assign a default value, each element initially contains whatever random values happen to be at that memory location.</p>
+        </section>
+
+        <section class="main-section" id="Lambda_Expressions">
+            <header>
+                Lambda Expressions
+            </header>
+            <p>
+                In C++11 and later, a lambda expression—often called a lambda—is a convenient way of defining an anonymous function object (a closure) right at the location where it is invoked or passed as an argument to a function. Typically lambdas are used to encapsulate a few lines of code that are passed to algorithms or asynchronous methods. This article defines what lambdas are, compares them to other programming techniques, describes their advantages, and provides a basic example.
+            </p>
+            <div class="code-div">
+                <code>
+                    #include &lt;algorithm&gt;<br>
+                        #include &lt;cmath&gt;<br>
+                        
+                        void abssort(float* x, unsigned n) {<br><br>
+                            <p style="text-indent: 20px; margin:0;">std::sort(x, x + n,</p>
+                            <p style="text-indent: 40px; margin:0;">   // Lambda expression begins</p>
+                                <p style="text-indent: 40px; margin:0;">  [](float a, float b) {</p>
+                                    <p style="text-indent: 40px; margin:0;">       return (std::abs(a) < std::abs(b));</p>
+                                        <p style="text-indent: 40px; margin:0;">    } // end of lambda expression</p><br>   
+                                            <p style="text-indent: 20px; margin:0;">);</p><br>
+                        }
+                </code>
+            </div>
+
+        </section>
+
+        <section class="main-section" id="Expression_Handling">
+            <header>
+                Expression Handling
+            </header>
+            <p>
+                An exception is an error condition, possibly outside the program's control, that prevents the program from continuing along its regular execution path. Certain operations, including object creation, file input/output, and function calls made from other modules, are all potential sources of exceptions, even when your program is running correctly. Robust code anticipates and handles exceptions. To detect logic errors, use assertions rather than exceptions (see Using Assertions).
+            </p>
+            <p>
+                Exceptions in C++ resemble ones in languages such as C# and Java. In the try block, if an exception is thrown it will be caught by the first associated catch block whose type matches that of the exception. In other words, execution jumps from the throw statement to the catch statement. If no usable catch block is found, std::terminate is invoked and the program exits. In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from std::exception. In the previous example, the exception type, invalid_argument, is defined in the standard library in the <stdexcept> header file. C++ doesn't provide or require a finally block to make sure all resources are released if an exception is thrown. 
+            </p>
+            <div class="code-div">
+                <code>
+                    try<br>
+                    <p style="text-indent: 20px; margin:0;">{<br></p>
+                        <p style="text-indent: 40px; margin:0;">...</p> 
+                        <p style="text-indent: 20px; margin:0;">}<br><br>
+                    catch<br>
+                    <p style="text-indent: 20px; margin:0;">{<br></p>
+                        <p style="text-indent: 40px; margin:0;">...</p>
+                        <p style="text-indent: 20px; margin:0;">}
+                </code>
+
+            </div>
+        </section>
+
+        <section class="main-section" id="Templates">
+            <header>
+                Templates
+            </header>
+            <p>
+                Templates are the basis for generic programming in C++. As a strongly-typed language, C++ requires all variables to have a specific type, either explicitly declared by the programmer or deduced by the compiler. However, many data structures and algorithms look the same no matter what type they are operating on. Templates enable you to define the operations of a class or function, and let the user specify what concrete types those operations should work on.
+            </p>
+            <p>
+                A template is a construct that generates an ordinary type or function at compile time based on arguments the user supplies for the template parameters. For example, you can define a function template like this:
+
+            </p>
+            <div class="code-div">
+                <code>
+                    template &lt;typename T&gt;
+                        <p style="text-indent: 20px; margin:0;">T minimum(const T& lhs, const T& rhs)
+                            <p style="text-indent: 20px; margin:0;">{</p>
+                                <p style="text-indent: 40px; margin:0;">  return lhs &lt; rhs ? lhs : rhs;</p>
+                            <p style="text-indent: 20px; margin:0;">}</p>
+                </code>
+            </div>
+            <p>
+                The above code describes a template for a generic function with a single type parameter T, whose return value and call parameters (lhs and rhs) are all of this type. You can name a type parameter anything you like, but by convention single upper case letters are most commonly used. T is a template parameter; the typename keyword says that this parameter is a placeholder for a type. When the function is called, the compiler will replace every instance of T with the concrete type argument that is either specified by the user or deduced by the compiler. The process in which the compiler generates a class or function from a template is referred to as template instantiation; minimum<int> is an instantiation of the template minimum<T>.
+            </p>
+          </section>
+          <section class="main-section" id="Operator_Overloading" >
+              <header>
+                  Operator Overloading
+              </header>
+              <p>
+                The operator keyword declares a function specifying what operator-symbol means when applied to instances of a class. This gives the operator more than one meaning, or "overloads" it. The compiler distinguishes between the different meanings of an operator by examining the types of its operands.
+              </p>
+              <p>
+                You can redefine the function of most built-in operators globally or on a class-by-class basis. Overloaded operators are implemented as functions.
+
+                The name of an overloaded operator is operator x, where x is the operator as it appears in the following table. For example, to overload the addition operator, you define a function called operator+. Similarly, to overload the addition/assignment operator, +=, define a function called operator+=.
+              </p>
+          </section>
+
+          <section class="main-section" id="Event_Handling">
+              <header>
+                  Event Handling
+              </header>
+              <p>Event handling is primarily supported for COM classes (C++ classes that implement COM objects, typically using ATL classes or the coclass attribute). For more information, see Event handling in COM.</p>
+              <p>Event handling supports both single- and multithreaded usage. It protects data from simultaneous multithread access. You can derive subclasses from event source or receiver classes. These subclasses support extended event sourcing and receiving.
+
+                The Microsoft C++ compiler includes attributes and keywords for declaring events and event handlers. The event attributes and keywords can be used in CLR programs and in native C++ programs.</p>
+
+                
+
+
+          </section>
+          <section class="main-section" id="Overview_Of_Modules">
+              <header>Overview Of Modules</header>
+              <p>C++20 introduces modules, a modern solution for componentization of C++ libraries and programs. A module is a set of source code files that are compiled independently of the translation units that import them. Modules eliminate or greatly reduce many of the problems associated with the use of header files, and also potentially reduce compilation times. Macros, preprocessor directives, and non-exported names declared in a module are not visible and therefore have no effect on the compilation of the translation unit that imports the module. You can import modules in any order without concern for macro redefinitions. Declarations in the importing translation unit do not participate in overload resolution or name lookup in the imported module. After a module is compiled once, the results are stored in a binary file that describes all the exported types, functions and templates. That file can be processed much faster than a header file, and can be reused by the compiler every place where the module is imported in a project.</p>
+              <p>Modules can be used side by side with header files. A C++ source file can import modules and also #include header files. In some cases, a header file can be imported as a module rather than textually #included by the preprocessor. We recommend that new projects use modules rather than header files as much as possible. For larger existing projects under active development, we suggest that you experiment with converting legacy headers to modules to see whether you get a meaningful reduction in compilation times.</p>
+            </section>
+
+          <section class="main-section" id="Standard_Library_Reference">
+              <header>
+                  Standard Library Reference
+              </header>
+              <p>A C++ program can call on a large number of functions from this conforming implementation of the C++ Standard Library. These functions perform essential services such as input and output and provide efficient implementations of frequently used operations.</p>
+          </section>
+
+        
+
+    </main>
+
+</body>
+
+</html>
