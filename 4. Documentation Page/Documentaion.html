@@ -78,38 +78,33 @@
                 C++ Type System
             </header>
             
-            <ul>
-            <li><p>The concept of type is very important in C++. Every variable, function argument, and function return
+            <p>The concept of type is very important in C++. Every variable, function argument, and function return
                 value must have a type in order to be compiled. Also, every expression (including literal values) is
                 implicitly given a type by the compiler before it is evaluated. Some examples of types include int to
                 store integral values, double to store floating-point values (also known as scalar data types), or the
                 Standard Library class std::basic_string to store text.</p>
-            </li>    
-               
-            <li>
-                <p>
-                You can create your own type by defining a class
+            
+            <p>You can create your own type by defining a class
                 or struct. The type specifies the amount of memory that will be allocated for the variable (or
                 expression result), the kinds of values that may be stored in that variable, how those values (as bit
                 patterns) are interpreted, and the operations that can be performed on it. This article contains an
                 informal overview of the major features of the C++ type system.</p>
-            </li> 
-            <li>   
+           
                 <p>Unlike some languages, C++ has no universal base type from which all other types are derived. The
                 language includes many fundamental types, also known as built-in types. This includes numeric types such
                 as int, double, long, bool, plus the char and wchar_t types for ASCII and UNICODE characters,
                 respectively. Most integral fundamental types (except bool, double, wchar_t, and related types) all have
                 unsigned versions, which modify the range of values that the variable can store. </p>
                 
-            </li>
+            
 
-            <li>
+            
                 <p>
                 For example, an int,
                 which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An
                 unsigned int, which is also stored as 32-bits, can store a value from 0 to 4,294,967,295. The total
-                number of possible values in each case is the same; only the range is different.</p>
-            <li><p>Dating back to the earliest versions of the C language, C++ continues to let you declare a variable of a
+                number of possible values in each case is the same; only the range is different.
+                Dating back to the earliest versions of the C language, C++ continues to let you declare a variable of a
                 pointer type by using the special declarator * (asterisk). A pointer type stores the address of the
                 location in memory where the actual data value is stored. In modern C++, these are referred to as raw
                 pointers, and are accessed in your code through special operators * (asterisk) or -> (dash with
@@ -124,7 +119,7 @@
                 to use raw pointers for observing objects, but if you must use them for object ownership, you should do
                 so with caution and very careful consideration of how the objects owned by them are created and
                 destroyed.</p>
-            </ul>
+            
             <div class="code-div">
                 <code>
                     int* pNumber; <br>     
